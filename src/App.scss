@@ -1,3 +1,10 @@
+
+@import './components/dashboard/dashboard.scss';
+@import './components/ChartBar/chart-bar.scss';
+@import './components/ChartPie/chart-pie.scss';
+@import './components/ChartDonut/chart-donut.scss';
+@import './components/ChartLine/chart-line.scss';
+
 .App {
   background: white;
   text-align: center;
