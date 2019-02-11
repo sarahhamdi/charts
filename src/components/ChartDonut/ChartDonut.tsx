@@ -6,7 +6,7 @@ const ChartDonut = () => (
   <GraphContext.Consumer>
     {(value) => (
       <PieChart width={800} height={400}>
-        <Pie dataKey='value' data={value.dataPie} cx={200} cy={200} innerRadius={40} outerRadius={80} fill={value.color2} />
+        <Pie dataKey='value' data={value.dataPie} cx={200} cy={200} innerRadius={40} outerRadius={80} fill={value.colors[0]} />
         <Tooltip />
       </PieChart>
     )}

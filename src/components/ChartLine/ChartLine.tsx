@@ -6,7 +6,7 @@ const ChartLine = () => (
   <GraphContext.Consumer>
     {(value) => (
       <LineChart width={400} height={400} data={value.dataLine}>
-        <Line type="monotone" dataKey="uv" stroke={value.color2} />
+        <Line type="monotone" dataKey="uv" stroke={value.colors[1]} />
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />

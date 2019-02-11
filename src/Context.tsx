@@ -12,17 +12,17 @@ interface dataBar {
 }
 
 export type GraphContext = {
-  color1: string,
-  color2: string,
+  colors: string[]
   dataPie?: dataPie[],
   dataBar?: dataBar[],
   dataLine?: dataBar[]
 }
 
+// not sure why i have to define all these default values here...
+// am i misunderstanding something about createContext + ts?
 export default React.createContext<GraphContext>({
-  color1: '',
-  color2: '',
+  colors: [],
   dataPie: [{ name: '', value: 0 }],
   dataBar: [{ name: '', uv: 0, pv: 0, amt: 0 }],
-  dataLine: [{ name: '', uv: 0, pv: 0, amt: 0 }]
+  dataLine: [{ name: '', uv: 0, pv: 0, amt: 0 }] 
 })

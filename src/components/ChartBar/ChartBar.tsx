@@ -12,8 +12,8 @@ const ChartBar = () => (
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="pv" fill={value.color1}/>
-        <Bar dataKey="uv" fill={value.color2} />
+        <Bar dataKey="pv" fill={value.colors[0]}/>
+        <Bar dataKey="uv" fill={value.colors[1]} />
       </BarChart>
     )}
   </GraphContext.Consumer>
