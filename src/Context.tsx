@@ -1,10 +1,10 @@
 import React from 'react';
-interface dataPie {
+export interface dataPie {
   name: string,
   value: number
 }
 
-interface dataBar {
+export interface dataBar {
   name: string,
   uv: number, 
   pv: number, 
@@ -15,7 +15,8 @@ export type GraphContext = {
   colors: string[]
   dataPie?: dataPie[],
   dataBar?: dataBar[],
-  dataLine?: dataBar[]
+  dataLine?: dataBar[],
+  data?: any
 }
 
 // not sure why i have to define all these default values here...
@@ -24,5 +25,5 @@ export default React.createContext<GraphContext>({
   colors: [],
   dataPie: [{ name: '', value: 0 }],
   dataBar: [{ name: '', uv: 0, pv: 0, amt: 0 }],
-  dataLine: [{ name: '', uv: 0, pv: 0, amt: 0 }] 
+  dataLine: [{ name: '', uv: 0, pv: 0, amt: 0 }]
 })

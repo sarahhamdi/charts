@@ -2,20 +2,24 @@ import React from 'react';
 import Dashboard from './components/Dashboard/Dashboard'
 import './App.scss';
 
-import GraphContext, { GraphContext as StateType } from './Context'
+import GraphContext, { GraphContext as StateType, dataPie } from './Context'
 import { data, data01 } from './data/placeholder'
 
 class App extends React.Component {
+  changeValuePie = (dataPie: dataPie[]) => this.setState({ dataPie })
+
   state: StateType = {
     colors: ['#F0C22A', '#E69266'],
     dataBar: data,
     dataLine: data,
-    dataPie: data01
+    dataPie: data01,
+    data: this.changeValuePie
   }
 
   render() {
     return (
-      <GraphContext.Provider value={this.state}>
+      <GraphContext.Provider 
+        value={this.state}>
         <Dashboard />
       </GraphContext.Provider>
     );
